@@ -4,9 +4,7 @@ import UserItem from "./UserItem";
 const Users = () => {
   return (
     <div>
-      <h4>Users</h4>
-      <UserItem/>
-      <UserItem/>
+      <h4 className="ps-3">Users</h4>
       <UserItem/>
     </div>
   );

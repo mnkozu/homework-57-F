@@ -7,6 +7,10 @@ import {User} from "./types";
 function App() {
   const [users, setUsers] = useState<User[]>([]);
 
+  const addUser = (newUser: User) => {
+    setUsers(prev => [...prev, newUser]);
+  };
+
   return (
     <>
       <header>
@@ -15,7 +19,7 @@ function App() {
       <main className="container-fluid">
         <div className="row mt-2">
           <div className="col">
-            <UserForm/>
+            <UserForm onSubmit={addUser}/>
           </div>
           <div className="col">
             <Users/>
